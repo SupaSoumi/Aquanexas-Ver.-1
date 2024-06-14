@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved - AquaNexus</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    #contact-form {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .form-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 30%;
+    }
+
+    #success-message {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .success-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 30%;
+      text-align: center;
+    }
+
+    .get-involved-hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+    }
+
+    .get-involved-hero-content {
+      flex: 1;
+    }
+
+    .happy-image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .happy-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-impact.html">Our Impact</a></li>
+        <li><a href="our-solutions.html">Our Solutions</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn" id="donate-btn">Donate</a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="get-involved-hero">
+      <div class="get-involved-hero-content">
+        <h1>Get Involved</h1>
+        <p>Join our mission to provide sustainable water solutions for communities in need.</p>
+      </div>
+      <div class="happy-image">
+        <img src="happy.png" alt="Happy Image">
+      </div>
+    </section>
+
+    <section class="get-involved-options">
+      <div class="option-card">
+        <div class="option-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3>Donate</h3>
+        <p>Your donation can help us provide clean water and sanitation to those in need.</p>
+        <a href="#" class="btn" id="donate-now-btn">Donate Now</a>
+      </div>
+      <div class="option-card">
+        <div class="option-icon">
+          <i class="fas fa-hands-helping"></i>
+        </div>
+        <h3>Volunteer</h3>
+        <p>Join our team of dedicated volunteers and make a difference in communities around the world.</p>
+        <a href="#" class="btn" id="volunteer-now-btn">Volunteer Now</a>
+      </div>
+      <div class="option-card">
+        <div class="option-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Partner</h3>
+        <p>Collaborate with us to deliver sustainable water solutions and create a lasting impact.</p>
+        <a href="#" class="btn" id="partner-now-btn">Partner Now</a>
+      </div>
+    </section>
+
+    <div id="contact-form">
+      <div class="form-content">
+        <span class="close">&times;</span>
+        <h2>Contact Information</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="success-message">
+      <div class="success-content">
+        <span class="close">&times;</span>
+        <h2>Thank you!</h2>
+        <p>Your information has been submitted successfully.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="logo">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </div>
+        <p>Unleashing potential through innovative solutions.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-impact.html">Our Impact</a></li>
+          <li><a href="our-solutions.html">Our Solutions</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> 123 Main Street, Cityville, State
+        </p>
+        <p>
+          <i class="fas fa-phone"></i> (123) 456-7890
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> info@aquanexus.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Stay updated on our latest projects and initiatives.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="marquee">
+        <div class="marquee-inner">
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+        </div>
+      </div>
+      <p>&copy; 2023 AquaNexus. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const donateNowBtn = document.getElementById('donate-now-btn');
+    const volunteerNowBtn = document.getElementById('volunteer-now-btn');
+    const partnerNowBtn = document.getElementById('partner-now-btn');
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+    const closeButtons = document.getElementsByClassName('close');
+
+    donateNowBtn.addEventListener('click', () => {
+      contactForm.style.display = 'block';
+    });
+
+    volunteerNowBtn.addEventListener('click', () => {
+      contactForm.style.display = 'block';
+    });
+
+    partnerNowBtn.addEventListener('click', () => {
+      contactForm.style.display = 'block';
+    });
+
+    for (let i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].addEventListener('click', () => {
+        contactForm.style.display = 'none';
+        successMessage.style.display = 'none';
+      });
+    }
+
+    window.addEventListener('click', (event) => {
+      if (event.target === contactForm) {
+        contactForm.style.display = 'none';
+      } else if (event.target === successMessage) {
+        successMessage.style.display = 'none';
+      }
+    });
+
+    const contactFormElement = document.querySelector('#contact-form form');
+    contactFormElement.addEventListener('submit', (event) => {
+      event.preventDefault();
+      contactForm.style.display = 'none';
+      successMessage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

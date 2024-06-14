@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowering Women through Water - AquaNexus</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-menu li {
+      margin-right: 20px;
+    }
+
+    .nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-menu li a:hover {
+      color: #ccc;
+    }
+
+    /* Hero Section Styles */
+    .impact-hero {
+      background-image: url('impact-story-2-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .impact-hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .impact-hero-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      margin-bottom: 20px;
+      transition: transform 0.5s ease;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .impact-hero-content p {
+      font-size: 24px;
+      transition: transform 0.5s ease;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Impact Story Section Styles */
+    .impact-story {
+      padding: 80px 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .impact-story-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .impact-story-text {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .impact-story-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .impact-story-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .impact-story-image {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .impact-story-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Call to Action Section Styles */
+    .cta {
+      background-color: #007bff;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .cta .btn {
+      background-color: #fff;
+      color: #007bff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .cta .btn:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    /* Testimonial Section Styles */
+    .testimonials {
+      padding: 80px 0;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonials-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .testimonial-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin: 20px;
+      flex: 1;
+      max-width: 400px;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonial-card blockquote {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card cite {
+      font-style: normal;
+      font-weight: 700;
+      color: #333;
+    }
+
+    /* Partner Section Styles */
+    .partners {
+      padding: 80px 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .partners-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .partner-logo {
+      margin: 20px;
+      max-width: 200px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .partner-logo:hover {
+      filter: grayscale(0%);
+    }
+
+    .partner-logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-section {
+      flex: 1;
+      margin: 20px;
+      max-width: 300px;
+    }
+
+    .footer-section h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .footer-section p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #fff;
+    }
+
+    .social-icons {
+      display: flex;
+    }
+
+    .social-icons li {
+      margin-right: 10px;
+    }
+
+    .social-icons li a {
+      color: #ccc;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      background-color: #222;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      font-size: 14px;
+      color: #ccc;
+      margin: 0;
+    }
+
+    /* Marquee Animation Styles */
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-inner {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 10s linear infinite;
+    }
+
+    .marquee-inner span {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+      margin-right: 50px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-impact.html">Our Impact</a></li>
+        <li><a href="our-solutions.html">Our Solutions</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="impact-hero">
+      <div class="impact-hero-content">
+        <h1>Empowering Women through Water</h1>
+        <p>Discover how our water sanitation solution has empowered women in rural communities.</p>
+      </div>
+    </section>
+
+    <section class="impact-story container">
+      <div class="impact-story-content">
+        <div class="impact-story-text">
+          <h2>The Challenge</h2>
+          <p>In many rural communities around the world, women and girls bear the burden of fetching water from distant sources, often walking miles every day. This arduous task not only consumes a significant portion of their time but also exposes them to potential risks and hinders their ability to pursue education or economic opportunities.</p>
+
+          <h2>Our Solution</h2>
+          <p>AquaNexus recognized the need to empower women and address this critical issue. We implemented a comprehensive water sanitation solution that brought clean water sources closer to these communities. By installing wells, water purification systems, and sanitation facilities, we significantly reduced the time and effort required for water collection.</p>
+
+          <h2>The Impact</h2>
+          <p>The impact of our solution has been transformative. With access to clean water and improved sanitation, women and girls have been liberated from the burden of water collection. They now have more time to pursue education, engage in income-generating activities, and participate in community development initiatives. This newfound freedom has empowered them to become agents of change, driving economic growth and social progress within their communities.</p>
+        </div>
+        <div class="impact-story-image">
+          <img src="impact-story-2-image.jpg" alt="Empowering Women through Water">
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="testimonials-content">
+        <div class="testimonial-card">
+          <blockquote>
+            "Thanks to AquaNexus, I no longer have to spend hours every day fetching water. I can now focus on my education and pursue my dreams."
+          </blockquote>
+          <cite>- Fatima, Student</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>
+            "With the time saved from water collection, I started a small business selling handicrafts. I'm now able to contribute to my family's income and support my children's education."
+          </blockquote>
+          <cite>- Amina, Entrepreneur</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>
+            "The water sanitation project has not only improved our health but also empowered women in our community. We are now actively involved in decision-making processes."
+          </blockquote>
+          <cite>- Fatima, Community Leader</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Join Our Mission</h2>
+        <p>Your support can help us empower more women and transform lives through access to clean water and sanitation.</p>
+        <a href="get-involved.html" class="btn">Get Involved</a>
+      </div>
+    </section>
+
+    <section class="partners container">
+      <h2 class="section-title">Our Partners</h2>
+      <div class="partners-content">
+        <div class="partner-logo">
+          <img src="partner-logo-1.png" alt="Partner Logo 1">
+        </div>
+        <div class="partner-logo">
+          <img src="partner-logo-2.png" alt="Partner Logo 2">
+        </div>
+        <div class="partner-logo">
+          <img src

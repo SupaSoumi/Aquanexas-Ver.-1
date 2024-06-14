@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Impact - AquaNexus</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adobe+Caslon+Pro:400italic">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-menu li {
+      margin-right: 20px;
+    }
+
+    .nav-menu li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-menu li a:hover {
+      color: #ccc;
+    }
+
+    .nav-cta .btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-cta .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Modal Styles */
+    #contact-form, #thank-you-message {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .form-content, .thank-you-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Hero Section Styles */
+    .impact-hero {
+      background-image: url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .impact-hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .impact-hero-content h1 {
+      font-family: 'Adobe Caslon Pro', serif;
+      font-style: italic;
+      font-size: 48px;
+      margin-bottom: 20px;
+      transition: transform 0.5s ease;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .impact-hero-content p {
+      font-size: 24px;
+      transition: transform 0.5s ease;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Impact Stories Section Styles */
+    .impact-stories {
+      padding: 80px 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .story-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .story-card {
+      width: 300px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .story-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .story-card-content {
+      padding: 20px;
+    }
+
+    .story-card-content h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .story-card-content p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-impact.html">Our Impact</a></li>
+        <li><a href="our-solutions.html">Our Solutions</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn" id="donate-btn">Donate</a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="impact-hero">
+      <div class="impact-hero-content">
+        <h1>Our Impact</h1>
+        <p>Discover how our solutions are transforming lives and communities.</p>
+      </div>
+    </section>
+
+    <section class="impact-stories container">
+      <div class="section-header">
+        <h2>Impact Stories</h2>
+        <p>Read inspiring stories about the positive impact of our water solutions.</p>
+      </div>
+      <div class="story-cards">
+        <div class="story-card">
+          <img src="impact-story-1.jpg" alt="Impact Story 1">
+          <div class="story-card-content">
+            <h3>Clean Water Brings Hope to a Village</h3>
+            <p>Learn how our water management solution helped a remote village in Africa gain access to clean water, transforming their daily lives and improving health outcomes.</p>
+            <a href="impact-story-1.html" class="btn">Read Story</a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="impact-story-2.jpg" alt="Impact Story 2">
+          <div class="story-card-content">
+            <h3>Empowering Women through Water</h3>
+            <p>Discover how our water sanitation solution has empowered women in rural communities, enabling them to start small businesses and achieve financial independence.</p>
+            <a href="impact-story-2.html" class="btn">Read Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="contact-form">
+      <div class="form-content">
+        <span class="close">&times;</span>
+        <h2>Contact Information</h2>
+        <form id="contact-form-element">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="thank-you-message">
+      <div class="thank-you-content">
+        <span class="close">&times;</span>
+        <h2>Thank you!</h2>
+        <p>Your information has been submitted successfully.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content container">
+      <div class="footer-section">
+        <div class="logo">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </div>
+        <p>Unleashing potential through innovative solutions.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-impact.html">Our Impact</a></li>
+          <li><a href="our-solutions.html">Our Solutions</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> 1233 Cilder Street, Idkvalle, Texas
+        </p>
+        <p>
+          <i class="fas fa-phone"></i> (123) 456-7890
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> info@aquanexus.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Stay updated on our latest projects and initiatives.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="marquee">
+        <div class="marquee-inner">
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

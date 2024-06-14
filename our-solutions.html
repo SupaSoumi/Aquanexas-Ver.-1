@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="AquaNexus - Innovative Solutions for Sustainable Water Management">
+  <meta name="keywords" content="water management, water sanitation, sustainability, water conservation">
+  <meta name="author" content="AquaNexus">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Solutions - AquaNexus</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    #info-box, #donate-form, #thank-you-message {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .info-content, .form-content, .thank-you-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .solutions-hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      height: 400px;
+      background: url('waterimage.gif') no-repeat center center/cover;
+    }
+
+    .solutions-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .solutions-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-impact.html">Our Impact</a></li>
+        <li><a href="our-solutions.html">Our Solutions</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn" id="donate-btn">Donate</a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="solutions-hero">
+      <div class="solutions-hero-content">
+        <h1>Innovative Solutions for a Water-Secure Future</h1>
+        <p>Explore our comprehensive range of sustainable water management and sanitation solutions.</p>
+      </div>
+    </section>
+
+    <section class="solutions">
+      <div class="section-header">
+        <h2>Our Solutions</h2>
+        <p>Explore our innovative solutions for sustainable water management and sanitation.</p>
+      </div>
+      <div class="solution-cards">
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <h3>Water Management</h3>
+          <p>We offer comprehensive solutions for sustainable water resource management, including water conservation, rainwater harvesting, and efficient irrigation methods.</p>
+          <a href="solution-details.html?solution=water-management" class="btn read-more-btn" data-solution="water-management" target="_blank">Read More</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <i class="fas fa-shower"></i>
+          </div>
+          <h3>Water Sanitation</h3>
+          <p>Our water sanitation services cover water treatment processes, safe drinking water guidelines, proper sanitation facilities, waste management, and hygiene practices.</p>
+          <a href="solution-details.html?solution=water-sanitation" class="btn read-more-btn" data-solution="water-sanitation" target="_blank">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-highlights">
+      <div class="section-header">
+        <h2>Solution Highlights</h2>
+        <p>Discover how our innovative solutions are transforming communities.</p>
+      </div>
+      <div class="highlight-cards">
+        <div class="highlight-card">
+          <img src="highlight-1.jpg" alt="Highlight 1">
+          <h3>Rainwater Harvesting Systems</h3>
+          <p>Learn how our rainwater harvesting systems are providing sustainable water sources for communities in arid regions.</p>
+          <a href="#" class="btn read-more-btn" id="rainwater-harvesting-btn">Read More</a>
+        </div>
+        <div class="highlight-card">
+          <img src="highlight-2.jpg" alt="Highlight 2">
+          <h3>Community Water Treatment Plants</h3>
+          <p>Discover how our community water treatment plants are ensuring access to safe drinking water for underserved populations.</p>
+          <a href="#" class="btn read-more-btn" id="water-treatment-btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="info-box">
+      <div class="info-content">
+        <span class="close">&times;</span>
+        <div id="info-content"></div>
+      </div>
+    </div>
+
+    <div id="donate-form">
+      <div class="form-content">
+        <span class="close">&times;</span>
+        <h2>Contact Information</h2>
+        <form id="donate-form-element">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="thank-you-message">
+      <div class="thank-you-content">
+        <span class="close">&times;</span>
+        <h2>Thank you!</h2>
+        <p>Your donation information has been submitted successfully.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="logo">
+          <img src="logo.png" alt="AquaNexus" class="logo-img">
+        </div>
+        <p>Unleashing potential through innovative solutions.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-impact.html">Our Impact</a></li>
+          <li><a href="our-solutions.html">Our Solutions</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> 1233 Cilder Street, Idkville, Texas
+        </p>
+        <p>
+          <i class="fas fa-phone"></i> (123) 456-7890
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> info@aquanexus.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Stay updated on our latest projects and initiatives.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="marquee">
+        <div class="marquee-inner">
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+          <span>Unleash the Power of Water</span>
+        </div>
+      </div>
+      <p>&copy; 2023 AquaNexus. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const rainwaterHarvestingBtn = document.getElementById('rainwater-harvesting-btn');
+    const waterTreatmentBtn = document.getElementById('water-treatment-btn');
+    const infoBox = document.getElementById('info-box');
+    const infoContent = document.getElementById('info-content');
+    const closeBtns = document.getElementsByClassName('close');
+    const donateBtn = document.getElementById('donate-btn');
+    const donateForm = document.getElementById('donate-form');
+    const thankYouMessage = document.getElementById('thank-you-message');
+    const donateFormElement = document.getElementById('donate-form-element');
+
+    rainwaterHarvestingBtn.addEventListener('click', () => {
+      infoContent.innerHTML = `
+        <h2>Rainwater Harvesting Systems</h2>
+        <p>Our rainwater harvesting systems are designed to capture and store rainwater for various uses, including irrigation, drinking water, and household use. These systems are particularly beneficial in arid regions where water scarcity is a significant challenge.</p>
+        <p>By implementing rainwater harvesting systems, communities can reduce their dependence on external water sources, improve water security, and promote sustainable water management practices. Our systems are tailored to meet the specific needs of each community, ensuring maximum efficiency and effectiveness.</p>
+      `;
+      infoBox.style.display = 'block';
+    });
+
+    waterTreatmentBtn.addEventListener('click', () => {
+      infoContent.innerHTML = `
+        <h2>Community Water Treatment Plants</h2>
+        <p>Our community water treatment plants are designed to provide safe and clean drinking water to underserved populations. These plants use advanced filtration and purification technologies to remove contaminants and ensure the water meets health and safety standards.</p>
+        <p>By establishing community water treatment plants, we aim to improve public health, reduce water-borne diseases, and enhance the overall quality of life for residents. Our approach involves working closely with local communities to ensure the sustainability and long-term success of these plants.</p>
+      `;
+      infoBox.style.display = 'block';
+    });
+
+    donateBtn.addEventListener('click', () => {
+      donateForm.style.display = 'block';
+    });
+
+    for (let i = 0; i < closeBtns.length; i++) {
+      closeBtns[i].addEventListener('click', () => {
+        infoBox.style.display = 'none';
+        donateForm.style.display = 'none';
+        thankYouMessage.style.display = 'none';
+      });
+    }
+
+    window.addEventListener('click', (event) => {
+      if (event.target === infoBox) {
+        infoBox.style.display = 'none';
+      } else if (event.target === donateForm) {
+        donateForm.style.display = 'none';
+      } else if (event.target === thankYouMessage) {
+        thankYouMessage.style.display = 'none';
+      }
+    });
+
+    donateFormElement.addEventListener('submit', (event) => {
+      event.preventDefault();
+      donateForm.style.display = 'none';
+      thankYouMessage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

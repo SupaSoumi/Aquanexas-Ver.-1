@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaNexus - Unleashing the Power of Water</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    /* ... */
+
+    /* Home Button Styles */
+    .home-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .home-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Side GIF Styles */
+    .side-gif {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 200px;
+      z-index: 999;
+      animation: bounce 2s infinite;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .side-gif img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Featured Solutions Section Styles */
+    .featured-solutions {
+      padding: 80px 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-image: linear-gradient(to bottom right, #f8f8f8, #e0e0e0);
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #333;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-description {
+      font-size: 18px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 40px;
+    }
+
+    .solution-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .solution-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .solution-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+      padding: 20px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .solution-description {
+      font-size: 16px;
+      color: #666;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <!-- ... -->
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Unleashing the Power of Water</h1>
+        <p>Discover our innovative solutions for sustainable water management.</p>
+        <a href="index.html" class="home-btn">Home</a>
+      </div>
+    </section>
+
+    <section class="featured-solutions">
+      <div class="container">
+        <h2 class="section-title">Featured Solutions</h2>
+        <p class="section-description">Explore our cutting-edge solutions for addressing water scarcity and providing access to clean water.</p>
+        <div class="solution-grid">
+          <div class="solution-card">
+            <img src="rainwater.jpeg" alt="Rainwater Harvesting System" class="solution-image">
+            <h3 class="solution-title">Rainwater Harvesting Systems</h3>
+            <p class="solution-description">Our rainwater harvesting systems are designed to capture and store rainwater for various uses, including irrigation, drinking water, and household use. These eco-friendly and cost-effective systems help reduce water scarcity in areas with limited access to clean water. <br><br>Our systems utilize advanced filtration and purification technologies to ensure the collected rainwater is safe for consumption. We offer customized solutions tailored to the specific needs and climate conditions of each community, including storage tanks, distribution systems, and maintenance support. <br><br>By implementing rainwater harvesting systems, communities can reduce their reliance on groundwater or municipal water supplies, conserve water resources, and promote sustainable water management practices. Our systems are designed to be durable, low-maintenance, and easy to operate, ensuring long-term reliability and cost-effectiveness. [1][2][3][4]</p>
+          </div>
+          <div class="solution-card">
+            <img src="plant.jpg" alt="Community Water Treatment Plant" class="solution-image">
+            <h3 class="solution-title">Community Water Treatment Plants</h3>
+            <p class="solution-description">Our community water treatment plants use advanced filtration and purification technologies to provide safe and clean drinking water to underserved populations. These energy-efficient and low-maintenance plants are capable of treating various water sources, including surface water and groundwater. <br><br>Our treatment processes remove harmful contaminants, bacteria, and pathogens, ensuring the water meets or exceeds international quality standards. We utilize a combination of physical, chemical, and biological treatment methods, such as sedimentation, filtration, disinfection, and reverse osmosis, to address specific water quality issues in each community. <br><br>In addition to providing clean drinking water, our community water treatment plants also support agricultural and industrial activities by providing treated water for irrigation and other non-potable uses. We offer training and support to local communities for the operation and maintenance of these plants, ensuring long-term sustainability and empowering communities to manage their water resources effectively. [5]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ... -->
+  </main>
+
+  <footer>
+    #Unfinished
+  </footer>
+
+  <div class="side-gif">
+    <img src="addgif.gif" alt="Side GIF">
+  </div>
+
+</body>
+</html>
